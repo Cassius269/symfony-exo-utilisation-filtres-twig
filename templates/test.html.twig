@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<h1>La page des utilisateurs</h1>
+<pre>
+        {{ dump(utilisateurs) }}
+    </pre>
+
+{% if utilisateurs %}
+	<h1>La liste des utilisateurs</h1>
+	{{ utilisateurs| map(p => "#{p.nom} #{p.prenom}") | join(' - ') }}
+
+</p>{% endif %}{% endblock %}
